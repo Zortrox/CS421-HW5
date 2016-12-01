@@ -41,7 +41,7 @@ public class CutVertex {
 			if(matrix[vertex][i] == 1){
 				child = i;
 				break;
-			}			
+			}
 		}
 		
 		//get the nodes visited as an array
@@ -51,21 +51,20 @@ public class CutVertex {
 		if(end.length - 1 < matrix.length){
 			System.out.println("Vertex " + vertex + " is a cut-vertex.");
 		} else {
-			System.out.println("Vertex " + vertex + " is not a cut-vertex." + end.length);
+			System.out.println("Vertex " + vertex + " is not a cut-vertex. Path length: " + (end.length - 1));
 		}
 
 		s.close();
 	}
-	
-	
+
 	//returns a string listing the indexes of all nodes found by a depth first search
 	//starting at node without traversing nodes twice
-	public static String DFS(int[][] matrix, String nodesVisited, int node){
+	public static String DFS(int[][] matrix, String nodesVisited, int node) {
 		
 		//for every possible child of node
-		for(int i = 0; i < matrix[node].length; i++){
+		for (int i = 0; i < matrix[node].length; i++) {
 			//if it is a child of node and it hasn't been visited before
-			if(matrix[node][i] == 1 && !nodesVisited.contains(" " + Integer.toString(i))){
+			if (matrix[node][i] == 1 && !nodesVisited.contains(" " + Integer.toString(i))) {
 				//call DFS on the child with the child added to nodesVisited
 				nodesVisited = DFS(matrix, nodesVisited + " " + i, i);
 			}
