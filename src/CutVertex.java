@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-//Jared Prince - Homework #5
+//Jared Prince/MatthewClark - Homework #5
 
 public class CutVertex {
 	public static void main(String args[]) throws FileNotFoundException{
